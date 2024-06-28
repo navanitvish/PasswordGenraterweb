@@ -1,0 +1,256 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(0, 221, 214, 1) 0%, rgba(51, 102, 255, 1) 90%);
+    display: flex;
+    min-height: 100vh;
+    max-width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container {
+    width: 90%;
+    max-width: 440px;
+}
+
+h1 {
+    color: azure;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.desplay-container {
+    position: relative;
+    background-color: rgb(55, 109, 208);
+    border-radius: 0.5rem;
+    border-bottom: 0.35rem solid rgb(255, 255, 255);
+    margin: 1rem 0;
+    padding-top: 0.35rem;
+
+}
+
+.display {
+    width: 100%;
+    background-color: transparent;
+    padding: 1.15rem 1rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 30px;
+    letter-spacing: 1px;
+    padding-right: 3.25rem;
+    border: none;
+
+}
+
+.display::placeholder {
+    position: absolute;
+    top: 50%;
+    left: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 30px;
+    text-transform: uppercase;
+    transform: translateY(-50%);
+    color: black;
+
+}
+
+.desplay-container button {
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+}
+
+.input-container {
+    width: 100%;
+    background-color: rgb(55, 109, 208);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    border-bottom: 0.35rem solid white;
+}
+
+.length-conatiner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.length-conatiner p:nth-child(1) {
+    color: aliceblue;
+    font-size: 1.5rem;
+}
+
+.length-conatiner p:nth-child(2) {
+    color: aliceblue;
+    font-size: 1.5rem;
+}
+
+
+
+.strength-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.75rem;
+    margin-bottom: 2rem;
+
+}
+
+.strength-container p {
+    color: aliceblue;
+    font-size: 1.5rem;
+}
+
+.indicator {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    text-shadow: 10rem;
+}
+
+.generateButton {
+    border: none;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    border-radius: 0.75rem;
+    border-bottom: 0.35rem solid cyan;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: black;
+    font-weight: 600;
+    font-size: 1.25rem;
+    background: aliceblue;
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0 1rem;
+}
+
+.check input {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid cyan;
+    cursor: pointer;
+    position: relative;
+}
+
+.check input:checked {
+    background-color: cyan;
+}
+
+.check input:checked::before {
+    content: '✔️';
+    position: absolute;
+    color: black;
+
+}
+
+.check label {
+    color: aliceblue;
+    font-size: 1.25rem;
+    letter-spacing: 0.75px;
+}
+
+.copyBtn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+/* coped top pe show karne ka code */
+.toolkit {
+    position: absolute;
+    background-color: cyan;
+    color: blueviolet;
+    font-size: 1.25rem;
+    top: -35px;
+    left: -25px;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+}
+
+.toolkit.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.slider1 {
+    appearance: none;
+    width: 100%;
+    cursor: pointer;
+    background-color: rgb(126, 155, 209);
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    background-image: linear-gradient(cyan, rgb(100, 139, 245));
+    background-repeat: no-repeat;
+    outline: none;
+    border: none;
+}
+
+.slider1::-webkit-slider-thumb {
+    appearance: none;
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: deepskyblue;
+    cursor: pointer;
+    margin-top: -5px;
+    box-shadow: 0px 0px 20px 0px rgb(4, 60, 63);
+    transition: all 100ms ease-in;
+}
+
+.slider1:focus {
+    outline: 3px solid aliceblue;
+}
+
+.slider1::-webkit-slider-thumb:hover {
+    outline: 2px solid rgb(93, 77, 238);
+    background-color: black;
+    box-shadow: 0px 0px 25px 5px rgb(15, 158, 236);
+
+}
+
+
+.slider1::-moz-range-thumb {
+    appearance: none;
+    z-index: 1;
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: deepskyblue;
+    cursor: pointer;
+    margin-top: -5px;
+    box-shadow: 0px 0px 20px 0px rgb(4, 60, 63);
+    transition: all 100ms ease-in;
+}
+
+
+.slider1::-moz-range-thumb:hover {
+    outline: 2px solid rgb(93, 77, 238);
+    background-color: black;
+    box-shadow: 0px 0px 25px 5px rgb(15, 158, 236);
+
+}
